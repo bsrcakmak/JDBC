@@ -13,12 +13,13 @@ SELECT * FROM companies;
 
 -- 1. Örnek: Prepared statement kullanarak company adı IBM olan number_of_employees değerini
 -- 9999 olarak güncelleyin.
+
 update companies 
 set number_of_employees = 9999
 where company = 'IBM';
 
+-- fonksiyon olusturuyoruz!!!
 
--- fonksiyon olusturuyoruz
 create or replace function toplama(x numeric, y numeric)
 returns numeric 
 language plpgsql
