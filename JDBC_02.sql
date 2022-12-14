@@ -11,9 +11,9 @@ fetch next 1 row only;   --limit 1 de diyebiliriz
 -- 2. yol; Subquery ile
 select company,number_of_employees from companies
 where number_of_employees = (select max(number_of_employees) 
-							 from companies
+			     from companies
                              where number_of_employees < (select max(number_of_employees) 
-														  from companies));
+							 from companies));
 
 
 CREATE TABLE companies
